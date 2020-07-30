@@ -2,6 +2,7 @@
   <div id="app">
     <Loader />
     <PosterBg :poster="posterBg" />
+    <Header />
     <MoviesList :list="moviesList" @changePoster="onChangePoster" />
     <Pagination
       :current-page="currentPage"
@@ -18,6 +19,7 @@ import MoviesList from "@/components/MoviesList.vue";
 import PosterBg from "@/components/PosterBg";
 import Pagination from "@/components/Pagination";
 import Loader from "@/components/Loader";
+import Header from "@/components/Header";
 
 export default {
   name: "App",
@@ -26,6 +28,7 @@ export default {
     PosterBg,
     Pagination,
     Loader,
+    Header,
   },
   data: () => ({
     posterBg: "",
@@ -66,6 +69,5 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
-  color: #2c3e50
   position: relative
 </style>
